@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="E_Ticaret.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+</head>
+<style type="text/css">
+    .arkaPlan
+    {
+        font-family:Arial, Helvetica, sans-serif;
+        margin-top:20px;
+        margin-bottom:40px;
+	    background:url(/Resimler/arkaplan.jpg) center top white repeat fixed;
+        line-height:12px;    
+    }
+    
+    .dvUrun
+    {
+        border:2px dotted;
+        text-align:center;
+        padding:5px;
+        background-color:#E0E0E0;
+        font-size:medium;
+    }
+    .dvUrun:hover
+    {
+        background-color:White;
+    }
+    .Filtreleme
+    {
+        height:50px;
+        font-size:medium;
+        margin-top:50px;
+    }
+    .UrunDetay
+    {
+        width:150px;
+        align:right;
+    }
+    ::selection{background-color:Orange;color:Black}   
+</style>
+<body bgcolor="#acb9ac" onload="startTime()" class="arkaPlan">
+    <form id="form1" runat="server">
+    <div>
+    <table id="Table1" width="1024" runat="server" align="center" cellspacing="0" cellpadding="0">
+        <tr style="background-color:WindowFrame">
+            <td  align="left">
+               <h1>
+                   <asp:Label ID="Label1" runat="server" Text=" MESUT KAYA" style="margin-left:10px"></asp:Label>
+               </h1>
+             </td>
+             <td style="width:50px">
+                 <asp:Button ID="sepetGoster" runat="server" Text="Sepetim" 
+                     onclick="sepetGoster_Click" />
+             </td>
+             <td style="width:50px">
+                 <asp:Button ID="girisCikis" runat="server" Text="Button" 
+                     onclick="girisCikis_Click" BackColor="AppWorkspace"/>
+             </td>
+        </tr>
+        <tr>
+            <td align="left">
+                <br />
+                <asp:Button ID="Button1" runat="server" Text="Anasayfa" style="height:30px" 
+                     onclick="Button1_Click"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:ContentPlaceHolder ID="head" runat="server"> </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <asp:ContentPlaceHolder ID="UrunlerBolgesi" runat="server"> </asp:ContentPlaceHolder>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="height:24px;font-family:Impact;font-size:20px;padding-top:30px;padding-left:10px;background-color:Silver">www.mesutkaya.com E-Ticaret Sitesi...2014-06...</div>
+            </td>
+        </tr>
+        </table>
+        
+    </div>
+
+    </form>
+</body>
+</html>
